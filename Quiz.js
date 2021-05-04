@@ -39,17 +39,17 @@ class Quiz {
 background("turquoise blue")
     //write code to show a heading for showing the result of Quiz
 textSize(35);
-    text("RESULTS",400,100);
+    text("RESULTS",300,200);
     //call getContestantInfo( ) here
     Contestant.getPlayerInfo();
 
 
     //write condition to check if contestantInfor is not undefined
     if(allContestants!==undefined){
-      var answers=400;
+      var answers=250;
       fill("pink");
       textSize(15);
-      text("*NOTE: Contestants who answered correct are highlighted in green colour",100,300);
+      text("*NOTE: Contestants who answered correct are highlighted in green colour",100,380);
       for(var player in allContestants){
         var correctAns="2";
         if(correctAns===allContestants[player].answer){
@@ -57,9 +57,9 @@ textSize(35);
             }else{
             fill("red");
           }
-          answers=answers+30;
-          textSize(50);
-          text(allContestants[player].name+":"+allContestants[player].answer,250,answer)
+          answers=answers+50;
+          textSize(30);
+          text(allContestants[player].name+":"+allContestants[player].answer,250,answers)
             }
       }
     //write code to add a note here
